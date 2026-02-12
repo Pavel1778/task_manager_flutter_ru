@@ -1,20 +1,45 @@
-# Manager Task Flutter RU 🗂️
+# Task Manager App
 
-[![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)](https://flutter.dev)
-[![Dart](https://img.shields.io/badge/Dart-3.x-0175C2?logo=dart)](https://dart.dev)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+A Flutter-based task management application with dark/light theme support and persistent storage using shared_preferences.
 
-Простой и удобный менеджер задач с русскоязычным интерфейсом.  
-Написан на Flutter, поддерживает тёмную тему и сохраняет задачи на устройстве.
+## Features
 
----
+- Add, edit, and delete tasks
+- Set task descriptions, deadlines, and priorities (high, medium, low)
+- Filter tasks: All, Active, Completed
+- Progress tracking with completion percentage
+- Dark/light theme toggle
+- Data persistence using shared_preferences
+- Visual indicators for overdue tasks
 
-## ✨ Возможности
+## Getting Started
 
-- ✅ Добавление, выполнение и удаление задач  
-- ⏰ Установка дедлайна с выбором даты и времени  
-- 🚦 Три уровня приоритета: MAX, MED, MIN  
-- 🌗 Автоматическое сохранение светлой или тёмной темы  
-- 📊 Статистика выполнения (всего, активно, выполнено, проценты)  
-- 💾 Все данные сохраняются локально (SharedPreferences)  
-- 🇷🇺 Полностью на русском языке  
+This project is a starting point for a Flutter application.
+
+### Prerequisites
+
+- Flutter SDK installed
+- Dart SDK (included with Flutter)
+
+### Installation
+
+1. Clone the repository
+2. Run `flutter pub get` to install dependencies
+3. Run `flutter run` to start the app
+
+## Dependencies
+
+- flutter: ^3.10.8
+- cupertino_icons: ^1.0.8
+- shared_preferences: ^2.2.0
+- flutter_lints: ^6.0.0
+
+## Development
+
+- Run `flutter analyze` to check for code issues
+- Run `flutter format lib/` to format code
+- Run `flutter test` to run tests
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
