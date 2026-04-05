@@ -31,7 +31,7 @@ Future<void> initNotifications() async {
       onDidReceiveNotificationResponse: (payload) {},
     );
   } catch (e) {
-   print('Ошибка инициализации уведомлений: $e');
+    // Игнорируем ошибки инициализации уведомлений
   }
 }
 
