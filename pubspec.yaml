@@ -1,21 +1,22 @@
-name: task_manager
-description: Менеджер задач на Flutter
+name: tasks_meneger
+description: "Менеджер задач"
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: ^3.11.0
+  sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
+  shared_preferences: ^2.3.0
   flutter_localizations:
     sdk: flutter
-  shared_preferences: ^2.3.0
-  flutter_local_notifications: ^18.0.0
-  flutter_timezone: ^3.0.0
-  timezone: ^0.10.0
-  table_calendar: ^3.1.0
+  flutter_local_notifications: ^17.2.0
+  table_calendar: ^3.1.2
+  timezone: ^0.9.4
+  flutter_timezone: 5.0.2
+  intl: ^0.20.2
 
 dev_dependencies:
   flutter_test:
@@ -24,4 +25,3 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
-  generate: true

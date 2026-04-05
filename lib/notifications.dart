@@ -14,11 +14,25 @@ const _quotes = [
 ];
 
 Future<void> initNotifications() async {
-  tzdata.initializeTimeZones();
-  final tzId = await FlutterTimezone.getLocalTimezone();
-  tz.setLocalLocation(tz.getLocation(tzId));
-  await _notif.initialize(const fln.InitializationSettings(
-    android: fln.AndroidInitializationSettings('@mipmap/ic_launcher')));
+  try {
+    tzdata.initializeTimeZones();
+    final tzId = await FlutterTimezone.getLocalTimezone();
+    tz.setLocalLocation(tz.getLocation(tzId as String));
+    
+    final androidSettings = fln.AndroidInitializationSettings('@mipmap/ic_launcher');
+    final iosSettings = fln.DarwinInitializationSettings(
+      requestAlertPermission: false,
+      requestBadgePermission: false,
+      requestSoundPermission: false,
+    );
+    
+    await _notif.initialize(
+      fln.InitializationSettings(android: androidSettings, iOS: iosSettings),
+      onDidReceiveNotificationResponse: (payload) {},
+    );
+  } catch (e) {
+   print('Ошибка инициализации уведомлений: $e');
+  }
 }
 
 Future<void> scheduleMorningNotif(List<Task> tasks) async {
